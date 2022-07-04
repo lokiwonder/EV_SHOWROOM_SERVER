@@ -1,9 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Render } from '@nestjs/common';
 
 @Controller()
-export class AppController {
-  @Get('test')
-  test() {
-    return 'Server Run';
-  }
-}
+export class AppController {}
