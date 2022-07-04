@@ -21,7 +21,7 @@ export class FileController {
   constructor(private fileService: FileService) {}
 
   @Get('getImage/:image')
-  getImage(@Param('image') image: string, @Res() res) {
+  getImage(@Param('image') image: string) {
     try {
       const file = fs.readFileSync(
         path.join(__dirname, `../../public/images/${image}`),
