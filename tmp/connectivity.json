@@ -1,0 +1,244 @@
+{
+	"connectivity_version": 0.0,
+	"bluelink": [
+		{
+			"sequence_number": 0,
+			"type": "Template Connnectivity",
+			"title": "Bluelink",
+			"comment": "Connect to your EV from anywhere",
+			"description": "",
+			"image": "867943a5-bbe7-4193-9704-65199a5fb808.png",
+			"features": [
+                "Charging Station Finder",
+                "Remote charging",
+                "Remote Climate Control",
+                "Find My Car",
+                "Live Servuces",
+                "Last Mile Guidance",
+                "Connected Navigation",
+                "Remote Door Lock"
+            ],
+			"first": true
+		},
+		{
+			"sequence_number": 1,
+			"type": "Template Connnectivity Sub",
+			"title": "Find a charge - everywhere",
+			"comment": "Access real-time charging station information on the navigation touch screen or the Bluelink® app on your smartphone - location, connector types and availability.*",
+			"description": "",
+			"image": "7395e008-edc3-479a-9456-800e9f950f30.png",
+			"feature": "Charging Station Finder",
+            "first": true
+		},
+		{
+			"sequence_number": 2,
+			"type": "Template Connnectivity Sub",
+			"title": "One look is all it takes",
+			"comment": "How far? How long? Access range and battery state of charge via the app or on the navigation touchscreen. Charging times are displayed as well when plugged into the various types of charges.",
+			"description": "",
+			"image": "aaec063d-2176-4acf-87de-2daf0b557f85.png",
+			"feature": "Remote charging",
+            "first": true
+		},
+		{
+			"sequence_number": 3,
+			"type": "Template Connnectivity Sub",
+			"title": "Real time info on traffic, weather, parking and more",
+			"comment": "Access real-time information on traffic, weather and POI, as well as on & off-street parking - even speed camera alerts where allowed by law. A powerful new Hyundai Cloud server uses real-time and historical traffic data for better connected routing and forecasting.",
+			"description": "",
+			"image": "79d80bd5-90ea-45f9-8611-7b7787a7fa55.png",
+			"feature": "Live Services",
+            "first": true
+		},
+		{
+			"sequence_number": 4,
+			"type": "Template Connnectivity Sub",
+			"title": "Connected Navigation",
+			"comment": "Quicker, more precise and super easy navigation. Enjoy more accurate traffic information, more precise times of arrival, and more reliable route recalculations so you get there faster. A powerful new Hyundai Cloud server uses real-time and historical data for better routing, forecasting, and POI info.",
+			"description": "",
+			"image": "d6b8c843-72f9-42c4-b19b-4cb780e30ca7.png",
+			"feature": "Remote Climate Control",
+            "first": true
+		},
+		{
+			"sequence_number": 5,
+			"type": "Template Connnectivity Sub",
+			"title": "Desired temperature when driving off",
+			"comment": "Schedule a time to pre-heat or cool your car when connected to an external power source - like at home in your garage. This is comfortable and also saves battery power that would be needed later to heat the car on the road.",
+			"description": "",
+			"image": "be347422-3e1b-4d46-b43a-3da70c28550f.png",
+			"feature": "Connected Navigation",
+            "first": true
+		},
+		{
+			"sequence_number": 6,
+			"type": "Template Connnectivity Sub",
+			"title": "Fast and easy locating",
+			"comment": "Forgot where you parked? No problem. Just open the Bluelink® app and the map shows you where your car is - nice and easy, the way life should be.",
+			"description": "",
+			"image": "65c43286-ac1a-4839-a54d-325b89117eb6.png",
+			"feature": "Find My car",
+            "first": true
+		},
+		{
+			"sequence_number": 7,
+			"type": "Template Connnectivity Sub",
+			"title": "Out of your car to your destination",
+			"comment": "If you have to park your Hyundai before you reach your end destination, you can hand over navigation from the car to the Bluelink® app. Your phone will then guide you exactly where you want to go with the help of augmented reality or Google Maps.",
+			"description": "",
+			"image": "21a7f1b4-858c-4754-b44e-5ce4bd0240df.png",
+			"feature": "Last Mile Guidance",
+            "first": true
+		},
+		{
+			"sequence_number": 8,
+			"type": "Template Connnectivity Sub",
+			"title": "Lock and unlock doors",
+			"comment": "If you forget to lock your car, your Hyundai will send a push notification to your smartphone. Then, after entering your PIN, you can lock or unlock your vehicle using a button in the Bluelink® app.",
+			"description": "",
+			"image": "1718ef9f-5c1e-4aca-bfee-58f0b10af304.png",
+			"feature": "Remote Door Lock",
+            "first": true
+		}
+	],
+	"charge_myHyundai": [
+		{
+			"sequence_number": 0,
+			"type": "Template Connnectivity",
+			"title": "Charge myHyundai",
+			"comment": "All-in-one charging for your EV",
+			"description": "",
+			"image": "5624ee94-8cb5-4263-a073-e58dc4718470.png",
+			"features": [
+                "Network",
+                "Getting started",
+                "Highlights",
+                "Tatiffs"
+            ],
+			"first": true
+		},
+		
+		{
+			"sequence_number": 1,
+			"type": "Template Connnectivity Sub",
+			"title": "Charging has never been easier",
+			"comment": "Welcome to Charge myHyundai: a comprehensive and easy-to-use public charging solution that gives you access to over 260,000 charge points in 29 European countries.",
+			"description": "",
+			"image": "636ea3c2-304e-4591-9501-1af37400317a.png",
+			"feature": "Network",
+            "first": true
+		},
+		{
+			"sequence_number": 2,
+			"type": "Template Connnectivity Sub",
+			"title": "Fast charging your electric vehicle around Europe",
+			"comment": "Access IONITY, Europe’s leading, high-power charging network for electric vehicles.\n\n ● High-power charging (HPC) network with a charging capacity of up to 350kW\n ● Soon over 400 charging stations along major European highways\n ● Simple access & payment through Charge myHyundai",
+			"description": "",
+			"image": "aab0f621-da67-4bbf-b737-14c9b4785942.png",
+			"feature": "Network",
+            "first": false
+		},
+		{
+			"sequence_number": 3,
+			"type": "Template Connnectivity Sub",
+			"title": "1 App. 1 Card. 1 Invoice. More than 260,000 Charge Points",
+			"comment": " ● No more range anxiety\n ● Access to more than 260,000 public charge points in 29 European countries\n ● Cross border charging with one single contract\n ● Charging sessions & invoices available in the Charge myHyundai web portal & app\n ● Attractive tariff models to fit your needs",
+			"description": "",
+			"image": "63a6871c-4783-488a-85b7-b1ceafc2b8bc.png",
+			"feature": "Hightlights",
+            "first": true
+		},
+		{
+			"sequence_number": 4,
+			"type": "Template Connnectivity Sub",
+			"title": "Find out more on our web portal",
+			"comment": "Visit chargemyhyundai.com to find details about the service. Our comprehensive network allows drivers to use multiple charging stations across Europe, without the need for additional contracts with other providers. The charge myHyundai web portal gives users access to the charging network map, product details, tariffs, invoices and account management.",
+			"description": "",
+			"image": "91b0340a-5600-4ec8-905b-7d8880c811a3.png",
+			"feature": "Hightlights",
+            "first": false
+		},
+		{
+			"sequence_number": 5,
+			"type": "Template Connnectivity Sub",
+			"title": "Get the app, find a charger anywhere",
+			"comment": "The Charge myHyundai experience is enhanced with the Charge myHyundai app which is available for iOS and Android. Search for charge points, apply various filters (such as plug type, charging speed, and access type) and even get real-time updates on charging fees and availability.",
+			"description": "",
+			"image": "f038dc8f-9549-4f31-9e51-a842e71d9554.png",
+			"feature": "Getting started",
+            "first": true
+		},
+        {
+            "sequence_number": 6,
+            "type": "Template Connectivity Sub 2",
+            "contents": [
+                {
+                    "layout_type": "B",
+                    "image": "4289c762-f0ad-4f5d-99b1-0850b79ea584.png",
+                    "comment": "Find and charge.\nAnywhere. Anytime.",
+                    "description": ""
+                },
+                {
+                    "layout_type": "B",
+                    "image": "e704f17e-bc1a-4290-abef-6d6ad77f903d.png",
+                    "comment": "Search at current location or plan your next trip.",
+                    "description": ""
+                },
+                {
+                    "layout_type": "B",
+                    "image": "e8d9bc95-2441-4de3-a748-ca6cac1c8312.png",
+                    "comment": "Your seamless access to all charging stations.",
+                    "description": ""
+                }
+            ],
+			"feature": "Getting started",
+            "first": false
+        },
+        {
+            "sequence_number": 7,
+            "type": "Template Connectivity Sub 2",
+            "contents": [
+                {
+                    "image": "9e0078d3-77a4-415c-9ad5-3f465fcf817c.png",
+                    "title": "Register",
+                    "comment": "Register to the charging service on chargemyhyundai.com and choose your preferred tariff.",
+                    "description": ""
+                },
+                {
+                    "image": "7e9d51bb-a7f5-449e-a6ab-d5d0c7390614.png",
+                    "title": "Activate card",
+                    "comment": "Order and activate the RFID card.",
+                    "description": ""
+                },
+                {
+                    "image": "fdf74d2f-1888-4093-882e-44d566e8995a.png",
+                    "title": "Find your next charge",
+                    "comment": "Explore the charging network along your journey.",
+                    "description": ""
+                }
+            ],
+			"feature": "Getting started",
+            "first": false
+        },
+		{
+			"sequence_number": 8,
+			"type": "Template Connnectivity Sub",
+			"title": "Attractive charging tariffs to fit your needs",
+			"comment": "Charge myHyundai offers different tariffs so you can find the perfect fit for your driving and charging needs. All tariffs are designed to make charging convenient, efficient and simple, offering easy payment and a single, straightforward monthly bill.",
+			"description": "",
+			"image": "e8a5290c-acae-4222-907e-c55b8684fadc.png",
+			"feature": "Trariffs",
+            "first": true
+		},
+		{
+			"sequence_number": 9,
+			"type": "Template Connnectivity Sub",
+			"title": "Flex",
+			"comment": "Do you usually drive rather short distances and do most of your charging at home? Our most flexible tariff gives you the freedom to charge whenever and wherever you have to - with no monthly subscription fees. Our recommendation for city commuters and plug-in hybrid drivers.",
+			"description": "",
+			"image": "d5a06ec5-6671-4f2f-b72e-ae419b3d8fd2.png",
+			"feature": "Trariffs",
+            "first": false
+		}
+	]
+}

@@ -1,0 +1,468 @@
+{
+	"powertrain_version": 0.0,
+	"mild_hybrid": [
+		{
+			"sequence_number": 0,
+			"type": "Template Powertrain",
+			"title": "Mild Hybrid",
+			"comment": "Jumpstart on saving fuel",
+			"description": "",
+			"image": "ba0aef2f-5faf-4be1-baec-be1dbf7fbf8b.png",
+			"vehicles": [
+				{
+					"vehicle_model_name": "i20",
+					"vehicle_model_image": "ec647ce0-bdc2-4346-a458-ea3d9223b100.png"
+				},
+                {
+					"vehicle_model_name": "i30",
+					"vehicle_model_image": "9c13b224-4ed9-4e2c-8119-241892eb699a.png"
+				},
+                {
+					"vehicle_model_name": "KONA",
+					"vehicle_model_image": "78d42082-9966-49f7-b1a8-e4df6935b999.png"
+				},
+                {
+					"vehicle_model_name": "TUCSON",
+					"vehicle_model_image": "a9f45eb8-240a-4889-8687-052ad7468c8f.png"
+				},
+                {
+					"vehicle_model_name": "BAYON",
+					"vehicle_model_image": "49d083bd-0297-4156-9fdb-47bbe96c2a50.png"
+				}
+			]
+		},
+		{
+			"sequence_number": 1,
+			"type": "Template 1",
+			"title": "48V Mild Hybrid",
+			"comment": "The 48 Volt Mild Hybrid system boosts and supports the engine during acceleration, while also reducing emissions and saving fuel.",
+			"description": "",
+			"image": "badb711e-e393-4c38-899d-26de8dc26722.png",
+			"vedio": "",
+			"vedio_image": ""
+		},
+		{
+			"sequence_number": 2,
+			"type": "Template 1",
+			"title": "Travel through cities with ease",
+			"comment": "The Mild Hybrid system lends itself to city traffic, as it enables the combustion engine to restart faster and more smoothly.",
+			"description": "",
+			"image": "b68a7d2c-23ce-4990-9c80-1518fb9dc54a.png",
+			"vedio": "",
+			"vedio_image": ""
+		},
+		{
+			"sequence_number": 3,
+			"type": "Template 1",
+			"title": "The advantages of a generator",
+			"comment": "The Mild Hybrid Starter Generator supports the motor and stores excess electricity in the additional battery located under the luggage compartment. Under acceleration, it supports the engine with 4 to 12kW of power.",
+			"description": "",
+			"image": "f68cf307-0137-4833-874f-ef08494463c0.png",
+			"vedio": "",
+			"vedio_image": ""
+		},
+		{
+			"sequence_number": 4,
+			"type": "Template Lottie",
+			"title": "Comfort start",
+			"comment": "The Mild Hybrid Starter Generator enables faster and smoother engine starts with a powerful take-off boost from the 48V battery.",
+			"description": "",
+			"image": "b073f0fc-7b16-42a4-92a9-5711fb73fae5.png",
+			"lottie": "6ab4dcfa-7231-4398-85ec-a70da3b9be33.json"
+		},
+		{
+			"sequence_number": 6,
+			"type": "Template Lottie",
+			"title": "Constant driving",
+			"comment": "At constant speeds, the Mild Hybrid Starter Generator is idle or acts as a generator to recharge the 48V battery.",
+			"description": "",
+			"image": "8e73f9e5-1224-4b63-a76b-5bf0ac9ed551.png",
+			"lottie": "6ab4dcfa-7231-4398-85ec-a70da3b9be33.json"
+		},
+		{
+			"sequence_number": 7,
+			"type": "Template Lottie",
+			"title": "Recuperation",
+			"comment": "The Mild Hybrid Starter Generator converts kinetic braking energy into electricity. Recuperating 10-12kW back into the 48V battery.",
+			"description": "",
+			"image": "65fc89d5-f83e-4bbb-94d4-eb7b828c1fb2.png",
+			"lottie": "6ab4dcfa-7231-4398-85ec-a70da3b9be33.json"
+		}
+	],
+	"hydrogen": [
+		{
+			"sequence_number": 0,
+			"type": "Template Powertrain",
+			"title": "Hydrogen",
+			"comment": "The Fuel Cell Electric Vehicle",
+			"description": "",
+			"image": "cf7ef3ed-4024-4c9d-a152-63e20e171a95.png",
+			"vehicles": [
+				{
+					"vehicle_model_name": "NEXO",
+					"vehicle_model_image": "ad37166e-f30a-49bd-a8dc-669031e867c5.png"
+				}
+			]
+		},
+		{
+			"sequence_number": 1,
+			"type": "Template 1",
+			"title": "Designed for beauty - but created for efficiency",
+			"comment": "The NEXO is a truly one-of-a-kind hydrogen fuel cell SUV that combines cutting-edge technology and futuristic design with fantastic driving range.",
+			"description": "",
+			"image": "f4fb2991-20a5-4f9d-b50b-d079c08a2ea2.png",
+			"vedio": "",
+			"vedio_image": ""
+		},
+		{
+			"sequence_number": 2,
+			"type": "Template 1",
+			"title": "666km* driving range",
+			"comment": "With a driving range of 666km* and the best fuel cell efficiency in the world, NEXO is in a class of its own.",
+			"description": "",
+			"image": "adf5bc8c-a255-4a06-a362-768c954e721f.png",
+			"vedio": "",
+			"vedio_image": ""
+		},
+		{
+			"sequence_number": 3,
+			"type": "Template 1",
+			"title": "The hydrogen powertrain",
+			"comment": "Fuel cell technology uses hydrogen to produce electricity. This energy is either transformed by an electric motor into motion or stored by the battery. The battery acts as an energy reserve and also stores recuperative energy.",
+			"description": "",
+			"image": "b8259fb1-251c-4932-bc55-35d32ad159dd.png",
+			"vedio": "",
+			"vedio_image": ""
+		},
+		{
+			"sequence_number": 4,
+			"type": "Template 1",
+			"title": "How fuel cell works",
+			"comment": "NEXO’s fuel cell stack combines hydrogen and oxygen to derive its energy. As protons bind with oxygen ions, it forms the technology’s sole emission: water.",
+			"description": "",
+			"image": "b6587c2f-de7b-4fa0-8ca2-ffd27c8d669a.png",
+			"vedio": "",
+			"vedio_image": ""
+		},
+		{
+			"sequence_number": 5,
+			"type": "Template Lottie",
+			"title": "Step 1",
+			"comment": "Oxygen from the surrounding air and hydrogen stored in the tanks flow into separate parts of the fuel cell stack.",
+			"description": "",
+			"image": "6eab0ecc-1d65-41bd-ba19-c799b7c46dc3.png",
+			"lottie": "6ab4dcfa-7231-4398-85ec-a70da3b9be33.json"
+		},
+		{
+			"sequence_number": 6,
+			"type": "Template Lottie",
+			"title": "Step 2",
+			"comment": "The reactions that take place in the fuel cell stack produce electricity and water.",
+			"description": "",
+			"image": "230e3202-5f57-4d69-a407-6a1fe72de4a7.png",
+			"lottie": "6ab4dcfa-7231-4398-85ec-a70da3b9be33.json"
+		},
+		{
+			"sequence_number": 7,
+			"type": "Template Lottie",
+			"title": "Step 3",
+			"comment": "The generated electricity is supplied to the motor and battery to drive the vehicle.",
+			"description": "",
+			"image": "b3e1d75a-2ca8-4cb5-9b4e-faed17719b55.png",
+			"lottie": "6ab4dcfa-7231-4398-85ec-a70da3b9be33.json"
+		},
+		{
+			"sequence_number": 8,
+			"type": "Template Lottie",
+			"title": "Step 4",
+			"comment": "Water is the only tailpipe emission.",
+			"description": "",
+			"image": "ed7ef4b8-025a-41e9-8689-210a54e78b89.png",
+			"lottie": "6ab4dcfa-7231-4398-85ec-a70da3b9be33.json"
+		},
+		{
+			"sequence_number": 9,
+			"type": "Template 1",
+			"title": "Hydrogen",
+			"comment": "Hydrogen is a versatile, clean, and safe energy carrier. Generating zero emissions at point of use, it can be produced from renewable electricity and from carbon-abated fossil fuels, thereby achieving completely zero-emission pathways.",
+			"description": "",
+			"image": "8a155504-ff0d-451a-8c5e-ed1408f7a555.png",
+			"vedio": "",
+			"vedio_image": ""
+		}
+	],
+	"full_electric": [
+		{
+			"sequence_number": 0,
+			"type": "Template Powertrain",
+			"title": "Full Electric",
+			"comment": "Electrifyingly Different",
+			"description": "",
+			"image": "16099781-0555-4817-b849-d839c9ffc9fb.png",
+			"vehicles": [
+				{
+					"vehicle_model_name": "KONA Electric",
+					"vehicle_model_image": "807f49ed-cda3-468c-9426-6bcbe5d6fba3.png"
+				},
+                {
+					"vehicle_model_name": "IONIQ 5",
+					"vehicle_model_image": "b2014c2c-0dcf-4ba9-afb8-1d690147e387.png"
+				},
+                {
+					"vehicle_model_name": "IONIQ Electric",
+					"vehicle_model_image": "3187ed31-2773-4e0c-93c9-2e467490f9d0.png"
+				}
+			]
+		},
+		{
+			"sequence_number": 1,
+			"type": "Template 1",
+			"title": "Up to twice the efficiency",
+			"comment": "The ration between the power generated by the motor and the energy inputted is better in an electric motor compared to internal-combustion.",
+			"description": "",
+			"image": "5bed6996-a203-437b-a242-d38c87c2cdcf.png",
+			"vedio": "",
+			"vedio_image": ""
+		},
+		{
+			"sequence_number": 2,
+			"type": "Template 1",
+			"title": "Clever charging solutions",
+			"comment": "Providing full coverage for e-mobility, Hyundai and IONITY* have joined forces to supply a wide network of charging solutions with clean energy.",
+			"description": "",
+			"image": "bc303b29-4701-4a9a-a0ac-fcdb6940d13b.png",
+			"vedio": "",
+			"vedio_image": ""
+		},
+		{
+			"sequence_number": 4,
+			"type": "Template Lottie",
+			"title": "Constant driving",
+			"comment": "Battery powers the electric motor, which powers the wheels. ",
+			"description": "",
+			"image": "cf7aead0-11f8-47b3-b348-5cd248510931.png",
+			"lottie": "6ab4dcfa-7231-4398-85ec-a70da3b9be33.json"
+		},
+		{
+			"sequence_number": 5,
+			"type": "Template Lottie",
+			"title": "Extending range",
+			"comment": "Decelerate and generate power. The electric motor recuperates energy while slowing down.",
+			"description": "",
+			"image": "494e5a2a-e847-46a9-895f-2bf593af2f88.png",
+			"lottie": "6ab4dcfa-7231-4398-85ec-a70da3b9be33.json"
+		},
+		{
+			"sequence_number": 6,
+			"type": "Template Lottie",
+			"title": "External charging",
+			"comment": "Plug in and recharge. At home, at work or at public charging spots.",
+			"description": "",
+			"image": "7e278a8e-7207-4d85-a8bb-68d5586cb2a2.png",
+			"lottie": "6ab4dcfa-7231-4398-85ec-a70da3b9be33.json"
+		}
+	],
+	"plug_in_hybrid": [
+		{
+			"sequence_number": 0,
+			"type": "Template Powertrain",
+			"title": "Plug-in Hybrid",
+			"comment": "Best of both worlds",
+			"description": "",
+			"image": "68ebf373-96b6-443e-aa2d-75de7770b617.png",
+			"vehicles": [
+				{
+					"vehicle_model_name": "TUCSON Plug-in Hybrid",
+					"vehicle_model_image": "375e7f25-5c8b-4936-a812-e8009f43643a.png"
+				},
+                {
+					"vehicle_model_name": "SANTA FE Plug-in Hybrid",
+					"vehicle_model_image": "b748a927-723f-4f47-8c97-425f6e4a98b1.png"
+				},
+                {
+					"vehicle_model_name": "IONIQ Plug-in hybrid",
+					"vehicle_model_image": "d11d447b-5e9f-456f-8bb9-69aa422f9deb.png"
+				}
+			]
+		},
+		{
+			"sequence_number": 1,
+			"type": "Template 1",
+			"title": "Electric when you want it. Petrol when you need it",
+			"comment": "A Plug-in Hybrid offers the best of both worlds: an all-electric driving range with the added flexibility of a petrol engine.",
+			"description": "",
+			"image": "f77ad950-ddf5-4bbf-987f-0f90d910b348.png",
+			"vedio": "",
+			"vedio_image": ""
+		},
+		{
+			"sequence_number": 2,
+			"type": "Template 1",
+			"title": "Plugged into efficiency",
+			"comment": "In hybrid mode, the battery-powered electric motor works in tandem with the petrol engine to deliver amazing fuel economy and lower emissions.",
+			"description": "",
+			"image": "aa5c6f3a-d4c2-4a5c-8311-9856e37621c3.png",
+			"vedio": "",
+			"vedio_image": ""
+		},
+		{
+			"sequence_number": 3,
+			"type": "Template 1",
+			"title": "Larger battery, greater range",
+			"comment": "Activate full-electric driving by pushing the EV mode button. Once the battery is depleted or EV mode deactivated by pushing the button again, the car operates as a hybrid.",
+			"description": "",
+			"image": "41b3eb2d-a337-4ace-ae12-7914ea32163c.png",
+			"vedio": "",
+			"vedio_image": ""
+		},
+		{
+			"sequence_number": 4,
+			"type": "Template 1",
+			"title": "Power flow and ECO-DAS",
+			"comment": "Excellent fuel efficiency and low CO₂ emissions are supported by the ECO Driving Assistant System (ECO-DAS).* ",
+			"description": "",
+			"image": "44cd968c-2ec1-4ef2-8ef9-f3a15b4d775e.png",
+			"vedio": "",
+			"vedio_image": ""
+		},
+		{
+			"sequence_number": 5,
+			"type": "Template Lottie",
+			"title": "Start",
+			"comment": "Active EV mode allows for low speed travel and acceleration, powered by the electric motor.",
+			"description": "",
+			"image": "f55df879-cfe0-4617-8db5-42780d6e59f6.png",
+			"lottie": "6ab4dcfa-7231-4398-85ec-a70da3b9be33.json"
+		},
+		{
+			"sequence_number": 6,
+			"type": "Template Lottie",
+			"title": "Acceleration",
+			"comment": "Electric motor and petrol engine operate together to maximise acceleration and minimise fuel consumption.",
+			"description": "",
+			"image": "75195e5a-cb5f-48fc-bd70-815be83d119a.png",
+			"lottie": "6ab4dcfa-7231-4398-85ec-a70da3b9be33.json"
+		},
+		{
+			"sequence_number": 7,
+			"type": "Template Lottie",
+			"title": "Driving",
+			"comment": "At constant speeds, power is provided by either the petrol engine or the electric motor, whichever is the most energy-efficient in that situation.",
+			"description": "",
+			"image": "8170a085-283b-4bee-a3d0-61916de23e6a.png",
+			"lottie": "6ab4dcfa-7231-4398-85ec-a70da3b9be33.json"
+		},
+		{
+			"sequence_number": 8,
+			"type": "Template Lottie",
+			"title": "Deceleration & Recuperation",
+			"comment": "Regenerative braking charges the battery when driving downhill, braking or decelerating.",
+			"description": "",
+			"image": "895b9188-ef19-4d2e-81ab-fd56127f86fc.png",
+			"lottie": "6ab4dcfa-7231-4398-85ec-a70da3b9be33.json"
+		},
+		{
+			"sequence_number": 9,
+			"type": "Template Lottie",
+			"title": "External charging",
+			"comment": "Plug-in Hybrid’s battery can be charged by external power sources. Enjoy the fully-electric driving as long as the battery is charged. ",
+			"description": "",
+			"image": "",
+			"lottie": "6ab4dcfa-7231-4398-85ec-a70da3b9be33.json"
+		}
+	],
+	"hybrid": [
+		{
+			"sequence_number": 0,
+			"type": "Template Powertrain",
+			"title": "Hybrid",
+			"comment": "Low CO₂ emissions and fuel consumption",
+			"description": "",
+			"image": "fca7cb72-2bb0-4bf2-90d9-cfb5824376e2.png",
+			"vehicles": [
+				{
+					"vehicle_model_name": "IONIQ Hybrid",
+					"vehicle_model_image": "49e9a7dc-2424-4a1d-9fc8-e933ea7822c1.png"
+				},
+                {
+					"vehicle_model_name": "KONA Hybrid",
+					"vehicle_model_image": "ef17140d-bd25-47cf-9681-b203500ff20c.png"
+				},
+                {
+					"vehicle_model_name": "TUCSON Hybrid",
+					"vehicle_model_image": "e5e92bb0-0c1c-4a2d-a82c-eedb20945e1b.png"
+				},
+                {
+					"vehicle_model_name": "SANTA FE Hybrid",
+					"vehicle_model_image": "ebac3e43-66be-4a00-bbca-59785829f241.png"
+				}
+			]
+		},
+		{
+			"sequence_number": 1,
+			"type": "Template 1",
+			"title": "A full-parallel hybrid drive system",
+			"comment": "A Hybrid Powertrain features a full-parallel hybrid drive system. A highly efficient petrol engine and electric motor work together to deliver excellent fuel economy and lower emissions.",
+			"description": "",
+			"image": "64e17755-23c1-46d6-ac78-f9bd68c35ff3.png",
+			"vedio": "",
+			"vedio_image": ""
+		},
+		{
+			"sequence_number": 2,
+			"type": "Template 1",
+			"title": "A new generation of mobility",
+			"comment": "Nobody said that lowering emissions had to be boring. Thanks to innovative hybrid tech, a Hybrid combines head-turning looks with exceptional efficiency.",
+			"description": "",
+			"image": "fd1bb21c-170f-4235-9211-8886b8c11b46.png",
+			"vedio": "",
+			"vedio_image": ""
+		},
+		{
+			"sequence_number": 3,
+			"type": "Template 1",
+			"title": "Seamless switching between engines",
+			"comment": "Depending on the driving situation, a Hybrid Powertrain switches seamlessly between petrol engine and electric motor, sometimes utilizing both together. The regenerative braking system charges the battery by using the electric motor to slow down the car.",
+			"description": "",
+			"image": "b63bc4ea-5a3f-418e-a7c6-53b5d10dae3e.png",
+			"vedio": "",
+			"vedio_image": ""
+		},
+		{
+			"sequence_number": 4,
+			"type": "Template Lottie",
+			"title": "Start",
+			"comment": "When starting or driving at low speed, the electricity stored in the battery powers the electric motor.",
+			"description": "",
+			"image": "008fabdc-1a99-4442-ab67-a91d52ffd39c.png",
+			"lottie": "6ab4dcfa-7231-4398-85ec-a70da3b9be33.json"
+		},
+		{
+			"sequence_number": 5,
+			"type": "Template Lottie",
+			"title": "Acceleration",
+			"comment": "Electric motor and petrol operate together to maximise acceleration and minimise fuel consumption.",
+			"description": "",
+			"image": "c60acd79-3d63-449a-9751-186b72acdba5.png",
+			"lottie": "6ab4dcfa-7231-4398-85ec-a70da3b9be33.json"
+		},
+		{
+			"sequence_number": 6,
+			"type": "Template Lottie",
+			"title": "Driving",
+			"comment": "At constant speeds, power is provided by either the petrol engine or the electric motor, whichever is the most energy-efficient in that situation.",
+			"description": "",
+			"image": "23632ce0-1b54-4399-8844-fc7ac5d7ae0f.png",
+			"lottie": "6ab4dcfa-7231-4398-85ec-a70da3b9be33.json"
+		},
+		{
+			"sequence_number": 7,
+			"type": "Template Lottie",
+			"title": "Deceleration & Recuperation",
+			"comment": "The regenerative braking system charges the battery by using the electric motor to slow the car down. When ecelerating or driving downhill, the energy generated is stored in the battery.",
+			"description": "",
+			"image": "62aa2277-3f78-45e9-a103-2c864c8963d2.png",
+			"lottie": "6ab4dcfa-7231-4398-85ec-a70da3b9be33.json"
+		}
+	]
+}

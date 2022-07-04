@@ -1,0 +1,6 @@
+server:
+  port: 4000
+
+jwt:
+  secret: 'EVSHOWROOM!!'
+  expiresIn: 10800
