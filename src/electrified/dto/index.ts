@@ -1,3 +1,3 @@
-import InitiallizeElectrifiedDTO from './Initialize-electrified.dto';
+import InitiallizeElectrifiedDTO from './initialize-electrified.dto';
 
 export { InitiallizeElectrifiedDTO };
