@@ -135,8 +135,7 @@ const zipAsset = (asset, zip) => {
 // description: //
 const addZip = (zip, asset_name, asset_version, file_name, type) =>
   zip
-    .folder(asset_name)
-    .folder(asset_version)
+    .folder(`${asset_name}/${asset_version}`)
     .file(
       file_name,
       fs.readFileSync(
