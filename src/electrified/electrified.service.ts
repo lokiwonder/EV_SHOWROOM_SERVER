@@ -40,9 +40,6 @@ export class ElectrifiedService {
     // description: 데이터베이스에서 해당 국가에 대한 데이터 검색 //
     const electrified_data =
       await this.electrifiedResitory.electrifiedInitialize(country_code);
-
-    console.log(electrified_data);
-
     // description: 반환 JSON 데이터 //
     const result_data = getInitialJSON(dto, electrified_data);
 
@@ -54,6 +51,7 @@ export class ElectrifiedService {
 
     // description: asset 데이터 검색
     const assets = await this.electrifiedResitory.getAssets(electrified_names);
+    console.log(assets);
 
     // description: asset 데이터 압축
     zipAssets(assets, zip);
@@ -116,8 +114,9 @@ const getInitialJSON = (dto, electrified_data) => {
 };
 
 // description: //
-const zipAssets = (assets, zip) =>
+const zipAssets = (assets, zip) => {
   assets.forEach((asset) => zipAsset(asset, zip));
+};
 
 // description: //
 const zipAsset = (asset, zip) => {
@@ -133,9 +132,19 @@ const zipAsset = (asset, zip) => {
 };
 
 // description: //
-const addZip = (zip, asset_name, asset_version, file_name, type) =>
+const addZip = (zip, asset_name, asset_version, file_name, type) => {
+  // console.log(
+  //   path.join(
+  //     __dirname,
+  //     `../../public`,
+  //     asset_name,
+  //     asset_version,
+  //     type,
+  //     file_name,
+  //   ),
+  // );
   zip
-    .folder(`${asset_name}/${asset_version}`)
+    .folder(`${asset_name}`)
     .file(
       file_name,
       fs.readFileSync(
@@ -143,12 +152,13 @@ const addZip = (zip, asset_name, asset_version, file_name, type) =>
           __dirname,
           `../../public`,
           asset_name,
-          asset_version,
+          `${asset_version}`,
           type,
           file_name,
         ),
       ),
     );
+};
 
 // description: //
 const compress = (zip) => {
@@ -162,7 +172,7 @@ const compress = (zip) => {
         const streamFile = await createFileStream(zip_name);
         // description: //
         try {
-          fs.unlinkSync(path.join(__dirname, '../..', zip_name));
+          // fs.unlinkSync(path.join(__dirname, '../..', zip_name));
         } catch (e) {
           console.log('file unlink warning');
         }

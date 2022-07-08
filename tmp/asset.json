@@ -1,8 +1,8 @@
 [
     {
-        "app_type": "ELECTRICFIED",
+        "app_type": "ELECTRIFIED",
         "asset_name": "KONA Electric",
-        "asset_verson": 0,
+        "asset_version": 0,
         "images": [
             "00d2f590-a2a6-4865-b8c8-e5cdcc286ea3.png",
             "3b5055c2-8b3a-4a49-bc47-5b18c6ca39d1.png",
@@ -18,8 +18,7 @@
             "5955e2c0-7c5d-4f93-852c-72f9e083135c.png",
             "a2d6f713-ff0d-4991-954f-dabbe30b92b6.png",
             "adfc7079-9b3b-4593-987e-9b5a1bcf49e6.png",
-            "b1d14332-45d7-4088-8cd5-cd0d6edb81df.png",
-            "b1d14332-45d7-4088-8cd5-cd0d6edb81df.png",
+            "b1d14332-45d7-4088-8cd5-cd0d6edb81df.jpeg",
             "b339a8b9-07c0-4c24-ab13-32109b656490.png",
             "c0acd0c2-daf6-4495-98e2-7ce5f36c324d.png",
             "d4f1e4f3-0506-4491-aa37-5783b775c775.png",
@@ -34,9 +33,9 @@
         ]
     },
     {
-        "app_type": "ELECTRICFIED",
+        "app_type": "ELECTRIFIED",
         "asset_name": "IONIQ Electric",
-        "asset_verson": 0,
+        "asset_version": 0,
         "images": [
             "0a32bb85-cd15-46b0-8fd4-a9a0fbaf1ff4.png",
             "0d9b411e-1f55-4013-8d19-d85025dc1b1c.png",
@@ -52,7 +51,7 @@
             "a91c9d02-659d-4af7-b6e9-c3322cb05ba0.png",
             "aa7bb8e8-ee40-4a2d-936a-3bfc7a2c9ad7.png",
             "b0d34d2a-ffb3-4511-90b7-9184f759b422.png",
-            "b1d14332-45d7-4088-8cd5-cd0d6edb81df.png",
+            "b1d14332-45d7-4088-8cd5-cd0d6edb81df.jpeg",
             "c01aac83-bf11-4dcf-8a40-ef6987ff67c3.png",
             "c2c7cf02-b897-482f-a2b7-a77da2535e5b.png",
             "c1736adb-170e-4d83-b5fb-be9ab5571919.png",
@@ -67,9 +66,9 @@
         ]
     },
     {
-        "app_type": "ELECTRICFIED",
+        "app_type": "ELECTRIFIED",
         "asset_name": "IONIQ 5",
-        "asset_verson": 0,
+        "asset_version": 0,
         "images": [
             "1d767afa-5a2a-471a-b488-7462aa716324.png",
             "02ce29b5-fe60-4cb5-ab58-d193051e464a.png",
@@ -88,7 +87,7 @@
             "69728ef1-3b52-4018-8d4e-7f2f71ead72c.png",
             "23841202-865c-4639-8db6-627e549e2c54.png",
             "a47acb41-b290-4511-8d0e-f9ab4742ff5e.png",
-            "b1d14332-45d7-4088-8cd5-cd0d6edb81df.png",
+            "b1d14332-45d7-4088-8cd5-cd0d6edb81df.jpeg",
             "b3b59cdb-133f-47c9-a80e-f9929643ff56.png",
             "c39ace99-f40b-411e-b78b-9e25eb305681.png",
             "c61361c1-009e-4e51-afbb-638a112379ba.png",

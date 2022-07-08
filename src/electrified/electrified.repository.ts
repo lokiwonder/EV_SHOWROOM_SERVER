@@ -61,17 +61,17 @@ export class ElectrifiedResitory {
     try {
       // description: //
       const result = [];
-      electrified_names.forEach(async (item) =>
+      for (const asset of electrified_names) {
         result.push(
           await this.assetModel
             .findOne({
               app_type: ELECTRIFIED,
-              asset_name: item.asset_name,
-              asset_version: item.asset_version,
+              asset_name: asset.asset_name,
+              asset_version: asset.asset_version,
             })
             .exec(),
-        ),
-      );
+        );
+      }
       return result;
     } catch (e) {
       this.logger.error(
