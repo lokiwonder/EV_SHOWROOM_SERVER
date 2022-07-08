@@ -31,7 +31,7 @@ const jwtConfig = config.get('jwt');
       },
     ]),
     HttpModule.register({
-      timeout: 5000,
+      timeout: 10000,
       maxRedirects: 5,
     }),
   ],

@@ -1,3 +1,4 @@
+import { LANGUAGE_CODE } from '@common/enums';
 import { Electrified_T } from '@common/types/ElectrifiedTranslation.type';
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
@@ -11,7 +12,7 @@ export class ElectrifiedTranslation {
   country: string;
   // description:
   @Prop()
-  languages: Array<string>;
+  languages: Array<LANGUAGE_CODE>;
   // description:
   @Prop()
   default_language: string;

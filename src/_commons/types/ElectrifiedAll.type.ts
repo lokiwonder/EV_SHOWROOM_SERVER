@@ -3,7 +3,7 @@ type ElectrifiedAll = {
   // description:
   electrified_item_name: string;
   // description:
-  electrified_version: number;
+  asset_version: number;
   // description:
   electrified_subtitle: string;
   // description:
@@ -13,7 +13,7 @@ type ElectrifiedAll = {
   // description:
   calculation_image: string;
   // description:
-  calculation_formula: any;
+  calculation_formula: string;
   // description:
   main: Template_3;
   // description:

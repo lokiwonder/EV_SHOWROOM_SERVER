@@ -1,4 +1,3 @@
-export class InitiallizeElectrifiedDTO {
-  app_id: string;
-  country: string;
-}
+import InitiallizeElectrifiedDTO from './Initialize-electrified.dto';
+
+export { InitiallizeElectrifiedDTO };

@@ -37,4 +37,26 @@ export class FileController {
       throw new ServiceUnavailableException('File Error');
     }
   }
+
+  @Get('getImage2/:item/:version/:image')
+  getImage2(
+    @Param('item') item: string,
+    @Param('version') version: number,
+    @Param('image') image: string,
+  ) {
+    try {
+      const file = fs.readFileSync(
+        path.join(__dirname, `../../public/images/${item}/${version}/${image}`),
+      );
+      // res.writeHead(200, { 'Context-Type': 'image/png' });
+      // res.write(file);
+      // res.end();
+      return new StreamableFile(file);
+    } catch (e) {
+      this.logger.error(`😵😵😵😵😵 FileController - getImage 😵😵😵😵😵`);
+      this.logger.error(`😵😵😵😵😵 ERROR MESSAGE - ${e.message} 😵😵😵😵😵`);
+
+      throw new ServiceUnavailableException('File Error');
+    }
+  }
 }

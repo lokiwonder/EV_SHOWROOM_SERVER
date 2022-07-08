@@ -49,17 +49,16 @@ export class AuthService {
       console.log(result.data);
       this.logger.debug(`token: ${result.data.result}`);
     } catch (e) {
-      this.logger.error(`😵😵😵😵😵 AdminRepository - checkData 😵😵😵😵😵`);
+      this.logger.error(`😵😵😵😵😵 AuthService - loginAdmin 😵😵😵😵😵`);
       this.logger.error(`😵😵😵😵😵 ERROR MESSAGE - ${e.message} 😵😵😵😵😵`);
 
       throw new UnauthorizedException('No Authorization');
     }
 
-    // description: 데이터베이스 Dealer에서 dealer_code를 조건으로 검색
-    // const dealer = await this.authRepository.getDealer(id);
+    // description: 로그인 정보가 일치하지 않으면 http status 401 - Unauthorized 반환
+    if (result.data.result === 'E')
+      throw new UnauthorizedException('No Authorization');
 
-    // description: 검색 결과가 존재한다면 req password와 db password 비교
-    // if (dealer !== null) {
     // description: access_token 생성
     const dealer_code = result.data.dealerCode;
     const country = getCountryCodeFromDealerData(result.data);
@@ -77,8 +76,5 @@ export class AuthService {
       country,
     };
     return auth_result;
-    // }
-    // description: 로그인 정보가 일치하지 않으면 http status 401 - Unauthorized 반환
-    // else throw new UnauthorizedException('Login Information Mismatch.');
   }
 }

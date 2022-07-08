@@ -22,12 +22,6 @@ export class ApplicationInfo {
   country: string;
   // description:
   @Prop()
-  dealer_code: string;
-  // description:
-  @Prop()
-  dealer_ship: string;
-  // description:
-  @Prop()
   create_datetime: string;
 }
 

@@ -85,7 +85,7 @@ export enum APP_TYPE {
 }
 
 export enum DEALER_COUNTRY {
-  AUSTRIA = 'C11AB',
+  AUSTRIA = 'C01AA',
   BELGIUM = 'C02AA',
   DENMARK = 'C04AA',
   FINLAND = 'C05AD',

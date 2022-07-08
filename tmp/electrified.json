@@ -1,7 +1,7 @@
 [
     {
         "electrified_item_name": "KONA Electric",
-        "electrified_version": 0.0,
+        "asset_version": 0.0,
         "electrified_subtitle": "On to better. On to electric.",
         "main_image": "3e07018f-8a5c-49ba-a37f-9f34e75b7f7d.png",
         "rotation_image": "5bd8dd21-e095-414b-815d-f0a8211ca597.png",
@@ -165,7 +165,7 @@
     },
     {
         "electrified_item_name": "IONIQ 5",
-        "electrified_version": 0.0,
+        "asset_version": 0.0,
         "electrified_subtitle": "Power your world",
         "main_image": "c934730d-05ca-4b01-ad50-54730c50bd3f.png",
         "rotation_image": "fc06d347-480a-4d37-a0fa-832d99aac82f.png",
@@ -343,7 +343,7 @@
     },
     {
         "electrified_item_name": "IONIQ Electric",
-        "electrified_version": 0.0,
+        "asset_version": 0.0,
         "electrified_subtitle": "Electric awaits. Next awaits.",
         "main_image": "33fcfc38-c809-4b6b-a0dc-3413a2938b10.png",
         "rotation_image": "a91c9d02-659d-4af7-b6e9-c3322cb05ba0.png",

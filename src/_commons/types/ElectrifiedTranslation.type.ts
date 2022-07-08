@@ -30,7 +30,7 @@ export type Electrified_T_Item = {
   // description:
   electrified_subtitle: string;
   // description:
-  electrified_version: number;
+  asset_version: number;
   // description:
   main_image: string;
   // description:

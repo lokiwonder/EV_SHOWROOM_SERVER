@@ -135,7 +135,7 @@ export const initializeElectrifiedTranslation = (
 
     const {
       electrified_item_name,
-      electrified_version,
+      asset_version,
       electrified_subtitle,
       main_image,
       rotation_image,
@@ -145,7 +145,7 @@ export const initializeElectrifiedTranslation = (
 
     const electrified_t_item: Electrified_T_Item = {
       electrified_item_name,
-      electrified_version,
+      asset_version,
       electrified_subtitle,
       main_image,
       rotation_image,

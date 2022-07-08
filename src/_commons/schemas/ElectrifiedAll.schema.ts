@@ -16,7 +16,7 @@ export class ElectrifiedAll {
   electrified_item_name: string;
   // description:
   @Prop()
-  version: number;
+  asset_version: number;
   // description:
   @Prop()
   electrified_subtitle: string;

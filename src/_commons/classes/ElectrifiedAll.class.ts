@@ -4,7 +4,7 @@ export default class ElectrifiedAll implements IElectrifiedAll {
   // description:
   electrified_item_name: string;
   // description:
-  electrified_version: number;
+  asset_version: number;
   // description:
   electrified_subtitle: string;
   // description:
