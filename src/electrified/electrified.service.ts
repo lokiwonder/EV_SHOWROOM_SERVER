@@ -1,4 +1,4 @@
-import { Injectable, Logger } from '@nestjs/common';
+import { Injectable, Logger, MethodNotAllowedException } from '@nestjs/common';
 import { InitiallizeElectrifiedDTO } from './dto';
 import { ElectrifiedResitory } from './electrified.repository';
 
@@ -9,6 +9,8 @@ import { v4 } from 'uuid';
 import * as fs from 'fs';
 import * as path from 'path';
 import * as JSZip from 'jszip';
+import ElectrifiedCheckDTO from './dto/electrified-check.dto';
+import TranslationCheckDTO from './dto/translation-check.dto';
 
 // description: //
 @Injectable()
@@ -22,7 +24,6 @@ export class ElectrifiedService {
     this.logger.verbose(
       '⚙️⚙️⚙️⚙️⚙️ ElectrifiedService - electrifiedInitialize  ⚙️⚙️⚙️⚙️⚙️',
     );
-
     // description: dto 비할당 구조 //
     const { country_code } = dto;
 
@@ -31,40 +32,48 @@ export class ElectrifiedService {
       asset_name: string;
       asset_version: number;
     }>();
-
     // description: 반환할 압축 파일 //
     const zip = new JSZip();
-
-    this.logger.debug(`country_code : ${country_code}`);
-
     // description: 데이터베이스에서 해당 국가에 대한 데이터 검색 //
     const electrified_data =
       await this.electrifiedResitory.electrifiedInitialize(country_code);
+
     // description: 반환 JSON 데이터 //
     const result_data = getInitialJSON(dto, electrified_data);
-
     // description: data.json 압축열에 삽입
     zip.file('data.json', JSON.stringify(result_data));
-
     // description: 데이터베이스에서 검색한 데이터에서 이름, 버전 추출
     getElectrifiedNames(result_data.translations, electrified_names);
-
     // description: asset 데이터 검색
     const assets = await this.electrifiedResitory.getAssets(electrified_names);
-    console.log(assets);
-
     // description: asset 데이터 압축
     zipAssets(assets, zip);
-
-    // description: app 사용 기록
-
-    // description: 압출 파일 반환
+    // description: 압축 파일 반환
     return await compress(zip);
   }
 
-  // description: //
-  electrifiedCheck() {
-    // description: //
+  // description: electrified version Check //
+  async electrifiedCheck(dto: ElectrifiedCheckDTO) {
+    this.logger.verbose(
+      '⚙️⚙️⚙️⚙️⚙️ ElectrifiedService - electrifiedInitialize  ⚙️⚙️⚙️⚙️⚙️',
+    );
+    // description: dto 비할당 구조 //
+    const { electrified_version, country_code } = dto;
+    this.logger.debug(country_code);
+    // description: 반환할 압축 파일 //
+    const zip = new JSZip();
+    // description: 해당 국가 코드의 번역 정보 가져오기
+    const electrified_data =
+      await this.electrifiedResitory.getTranslationElectrified(country_code);
+    // description: db electrified_version과 app electrified_version 비교
+    if (electrified_version === electrified_data.electrified_version)
+      throw new MethodNotAllowedException('The latest version');
+    // description: 반환 JSON 데이터 //
+    const result_data = getInitialJSON(dto, electrified_data);
+    // description: data.json 압축열에 삽입
+    zip.file('data.json', JSON.stringify(result_data));
+    // description: 압축 파일 반환
+    return await compress(zip);
   }
 
   // description: //
@@ -73,12 +82,30 @@ export class ElectrifiedService {
   }
 
   // description: //
-  translationCheck() {
-    // description: //
+  async translationCheck(dto: TranslationCheckDTO) {
+    this.logger.verbose(
+      '⚙️⚙️⚙️⚙️⚙️ ElectrifiedService - electrifiedInitialize  ⚙️⚙️⚙️⚙️⚙️',
+    );
+    // description: dto 비할당 구조 //
+    const { translation_version, country_code } = dto;
+    // description: 반환할 압축 파일 //
+    const zip = new JSZip();
+    // description: 해당 국가 코드의 번역 정보 가져오기
+    const electrified_data =
+      await this.electrifiedResitory.getTranslationElectrified(country_code);
+    // description: db electrified_version과 app electrified_version 비교
+    if (translation_version === electrified_data.translation_version)
+      throw new MethodNotAllowedException('The latest version');
+    // description: 반환 JSON 데이터 //
+    const result_data = getInitialJSON(dto, electrified_data);
+    // description: data.json 압축열에 삽입
+    zip.file('data.json', JSON.stringify(result_data));
+    // description: 압축 파일 반환
+    return await compress(zip);
   }
 }
 
-// function: //
+//                    function                    //
 // description: 데이터베이스에서 검색한 데이터에서 이름만 추출 //
 const getElectrifiedNames = (
   list,
@@ -97,8 +124,14 @@ const getInitialJSON = (dto, electrified_data) => {
   // description: //
   const { app_id, app_version, country_code } = dto;
   // description: Setting 데이터 set //
-  const { electrified_version, translation_version, languages, translations } =
-    electrified_data;
+  const {
+    electrified_version,
+    translation_version,
+    languages,
+    translations,
+    default_language,
+    displayable_electrifies,
+  } = electrified_data;
 
   const setting_data = new Setting(
     app_id,
@@ -107,7 +140,9 @@ const getInitialJSON = (dto, electrified_data) => {
     app_version,
     electrified_version,
     translation_version,
+    displayable_electrifies,
     languages,
+    default_language,
   );
   // description: JSON 데이터 반환 //
   return new ElectrifiedData(setting_data, translations);
@@ -133,16 +168,6 @@ const zipAsset = (asset, zip) => {
 
 // description: //
 const addZip = (zip, asset_name, asset_version, file_name, type) => {
-  // console.log(
-  //   path.join(
-  //     __dirname,
-  //     `../../public`,
-  //     asset_name,
-  //     asset_version,
-  //     type,
-  //     file_name,
-  //   ),
-  // );
   zip
     .folder(`${asset_name}`)
     .file(
@@ -172,7 +197,7 @@ const compress = (zip) => {
         const streamFile = await createFileStream(zip_name);
         // description: //
         try {
-          // fs.unlinkSync(path.join(__dirname, '../..', zip_name));
+          fs.unlinkSync(path.join(__dirname, '../..', zip_name));
         } catch (e) {
           console.log('file unlink warning');
         }
@@ -181,8 +206,11 @@ const compress = (zip) => {
   });
 };
 
+// description: //
 const createFileStream = (zip_name: string) => {
   return new Promise<fs.ReadStream>((resolve) => {
     resolve(fs.createReadStream(path.join(__dirname, '../..', zip_name)));
   });
 };
+
+//                    function                    //

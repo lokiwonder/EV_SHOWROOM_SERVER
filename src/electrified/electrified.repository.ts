@@ -22,7 +22,7 @@ export class ElectrifiedResitory {
   // description: admin controller logger
   private logger = new Logger('ElectrifiedResitory');
 
-  // description: repository
+  // description: repository //
   constructor(
     @InjectModel(ElectrifiedAll.name)
     private electrifiedAllModel: Model<ElectrifiedAllDocument>,
@@ -34,6 +34,9 @@ export class ElectrifiedResitory {
 
   // description: //
   async electrifiedInitialize(country_code: COUNTRY_CODE) {
+    this.logger.verbose(
+      '⚙️⚙️⚙️⚙️⚙️ ElectrifiedResitory - electrifiedInitialize  ⚙️⚙️⚙️⚙️⚙️',
+    );
     try {
       // description: //
       return await this.electrifiedTranslationModel
@@ -58,7 +61,11 @@ export class ElectrifiedResitory {
       asset_version: number;
     }>,
   ) {
+    this.logger.verbose(
+      '⚙️⚙️⚙️⚙️⚙️ ElectrifiedResitory - getAssets  ⚙️⚙️⚙️⚙️⚙️',
+    );
     try {
+      // todo: 분명 다른 방법이 있을 것인데..
       // description: //
       const result = [];
       for (const asset of electrified_names) {
@@ -76,6 +83,25 @@ export class ElectrifiedResitory {
     } catch (e) {
       this.logger.error(
         `😵😵😵😵😵 ElectrifiedResitory - getAssets 😵😵😵😵😵`,
+      );
+      this.logger.error(`😵😵😵😵😵 ERROR MESSAGE - ${e.message} 😵😵😵😵😵`);
+
+      throw new ServiceUnavailableException('Database Error');
+    }
+  }
+
+  // description: //
+  async getTranslationElectrified(country_code: COUNTRY_CODE) {
+    this.logger.verbose(
+      '⚙️⚙️⚙️⚙️⚙️ ElectrifiedResitory - getAssets  ⚙️⚙️⚙️⚙️⚙️',
+    );
+    try {
+      return await this.electrifiedTranslationModel
+        .findOne({ country: country_code })
+        .exec();
+    } catch (e) {
+      this.logger.error(
+        `😵😵😵😵😵 ElectrifiedResitory - getTranslationElectrified 😵😵😵😵😵`,
       );
       this.logger.error(`😵😵😵😵😵 ERROR MESSAGE - ${e.message} 😵😵😵😵😵`);
 
