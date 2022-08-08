@@ -10,8 +10,9 @@ import {
 import { AuthDealerDTO } from '@auth/dto';
 import { AuthService } from '@auth/auth.service';
 import AuthResult from '@common/types/AuthResult.type';
+import { AUTH_API, LOGIN_API } from '@common/constants';
 
-@Controller('apis/auth')
+@Controller(AUTH_API)
 export class AuthController {
   // description: auth controller logger
   private logger = new Logger('AuthController');
@@ -19,11 +20,11 @@ export class AuthController {
   constructor(private authService: AuthService) {}
 
   // description: Web - Admin 로그인
-  @Post('/loginAdmin')
-  // description: pipe에서 dealer_code, password type 확인
+  @Post(LOGIN_API)
+  // description: pipe에서 dealer_code, password type 확인 //
   @UsePipes(ValidationPipe)
   async loginAdmin(@Body() dto: AuthDealerDTO): Promise<AuthResult> {
-    this.logger.verbose('🔛🔛🔛🔛🔛Access apis/auth/loginAdmin🔛🔛🔛🔛🔛');
+    this.logger.verbose('🔛 Access apis/auth/loginAdmin');
     return this.authService.loginAdmin(dto);
   }
 }

@@ -1,3 +1,26 @@
+// description: END POINT //
+export const END_POINT = '/apis';
+
+// description: AUTH END POINT //
+export const AUTH_API = `${END_POINT}/auth`;
+
+export const LOGIN_API = 'login';
+
+// description: ADMIN END POINT //
+export const ADMIN_API = `${END_POINT}/admin`;
+
+export const DISPLAY_SETUP_API = 'displaySetup';
+export const SETTING_SETUP_API = 'settingSetup';
+export const DISPLAY_TRANSLATION_API = 'displayTranslation';
+export const DISPLAY_TRANSLATION_ITEM_API = 'displayTranslationItem';
+export const EDIT_TRANSLATION_API = 'editTranslation';
+
+// description: LOG END POINT //
+export const LOG_API = `${END_POINT}/log`;
+
+export const ELECTRIFIED_ACCESS_LOG_API = 'electrifiedAccessLog';
+
+// description: Just Constants //
 export const ELECTRIFIED = 'ELECTRIFIED';
 export const POWERTRAIN = 'POWERTRAIN';
 export const CONNECTIVITY = 'CONNECTIVITY';
@@ -24,11 +47,13 @@ export const TEMPLATE_CONNECTIVITY = 'Template Connnectivity';
 export const TEMPLATE_CONNECTIVITY_SUB = 'Template Connectivity Sub';
 export const TEMPLATE_CONNECTIVITY_SUB2 = 'Template Connectivity Sub 2';
 
+// description: URL //
 export const GET_TOKEN_URL =
   'https://hmetest.dealer-portal.net/irj/servlet/prt/portal/prtroot/hm.eu.myhyundai.auth.TokenGenerator';
 export const DEALER_PORTAL =
   'https://hmetest.dealer-portal.net/irj/servlet/prt/portal/prtroot/hm.eu.myhyundai.auth.AuthValidator';
 
+// description: Map Dealer Code to Country //
 export const AUSTRIA = 'C11AB';
 export const BELGIUM = 'C02AA';
 export const DENMARK = 'C04AA';

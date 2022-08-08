@@ -1,5 +1,5 @@
 import { Injectable, Logger, MethodNotAllowedException } from '@nestjs/common';
-import { InitiallizeElectrifiedDTO } from './dto';
+import { ElectrifiedDataDTO, InitiallizeElectrifiedDTO } from './dto';
 import { ElectrifiedResitory } from './electrified.repository';
 
 import { ElectrifiedData, Setting } from '@common/classes/Elecrified.class';
@@ -12,22 +12,38 @@ import * as JSZip from 'jszip';
 import ElectrifiedCheckDTO from './dto/electrified-check.dto';
 import TranslationCheckDTO from './dto/translation-check.dto';
 
-// description: //
 @Injectable()
 export class ElectrifiedService {
   private logger = new Logger('ElectrifiedService');
-  // description: //
+  // description: repository 의존성 주입 //
   constructor(private readonly electrifiedResitory: ElectrifiedResitory) {}
 
-  // description: //
-  async electrifiedInitialize(dto: InitiallizeElectrifiedDTO) {
-    this.logger.verbose(
-      '⚙️⚙️⚙️⚙️⚙️ ElectrifiedService - electrifiedInitialize  ⚙️⚙️⚙️⚙️⚙️',
-    );
+  //     function : electrifiedData     //
+  // description: setting data 반환 함수 //
+  async electrifiedData(dto: ElectrifiedDataDTO) {
+    this.logger.verbose('⚙️ ElectrifiedService - electrifiedData');
+
     // description: dto 비할당 구조 //
     const { country_code } = dto;
 
-    // description: DB 'in' operator 조건에 사용 할 Set
+    // description: Electrified App 정보 생성 //
+    await this.electrifiedResitory.createApp(dto);
+
+    // description: 데이터베이스에서 해당 국가에 대한 데이터 검색 //
+    const electrified_data =
+      await this.electrifiedResitory.electrifiedInitialize(country_code);
+    // description: JSON 데이터 반환 //
+    return getInitialJSON(dto, electrified_data);
+  }
+
+  //     function : electrifiedData     //
+  // description: initialize zip download //
+  async electrifiedInitialize(dto: InitiallizeElectrifiedDTO) {
+    this.logger.verbose('⚙️ ElectrifiedService - electrifiedInitialize');
+    // description: dto 비할당 구조 //
+    const { country_code } = dto;
+
+    // description: DB 'in' operator 조건에 사용 할 Set //
     const electrified_names = new Array<{
       asset_name: string;
       asset_version: number;
@@ -40,18 +56,19 @@ export class ElectrifiedService {
 
     // description: 반환 JSON 데이터 //
     const result_data = getInitialJSON(dto, electrified_data);
-    // description: data.json 압축열에 삽입
+    // description: data.json 압축열에 삽입 //
     zip.file('data.json', JSON.stringify(result_data));
-    // description: 데이터베이스에서 검색한 데이터에서 이름, 버전 추출
+    // description: 데이터베이스에서 검색한 데이터에서 이름, 버전 추출 //
     getElectrifiedNames(result_data.translations, electrified_names);
-    // description: asset 데이터 검색
+    // description: asset 데이터 검색 //
     const assets = await this.electrifiedResitory.getAssets(electrified_names);
-    // description: asset 데이터 압축
+    // description: asset 데이터 압축 //
     zipAssets(assets, zip);
-    // description: 압축 파일 반환
+    // description: 압축 파일 반환 //
     return await compress(zip);
   }
 
+  //     function : electrifiedData     //
   // description: electrified version Check //
   async electrifiedCheck(dto: ElectrifiedCheckDTO) {
     this.logger.verbose(
@@ -76,11 +93,13 @@ export class ElectrifiedService {
     return await compress(zip);
   }
 
+  //     function : electrifiedData     //
   // description: //
   assetCheck() {
     // description: //
   }
 
+  //     function : electrifiedData     //
   // description: //
   async translationCheck(dto: TranslationCheckDTO) {
     this.logger.verbose(

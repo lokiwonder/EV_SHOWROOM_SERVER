@@ -1,14 +1,29 @@
 import { Body, Controller, Logger, Post, StreamableFile } from '@nestjs/common';
-import { InitiallizeElectrifiedDTO } from './dto';
-import ElectrifiedCheckDTO from './dto/electrified-check.dto';
-import TranslationCheckDTO from './dto/translation-check.dto';
+import {
+  InitiallizeElectrifiedDTO,
+  ElectrifiedCheckDTO,
+  TranslationCheckDTO,
+  ElectrifiedDataDTO,
+} from './dto';
 import { ElectrifiedService } from './electrified.service';
 
+// description: Electrified App Controller //
 @Controller('apis/electrified')
 export class ElectrifiedController {
+  // description: Electrified Logger //
   private logger = new Logger('ElectrifiedController');
 
   constructor(private readonly electrifiedService: ElectrifiedService) {}
+
+  // description: setting data 반환 함수 //
+  @Post('electrifiedData')
+  async electrifiedData(@Body() dto: ElectrifiedDataDTO) {
+    this.logger.verbose(
+      '⚙️⚙️⚙️⚙️⚙️ ElectrifiedController - electrifiedData  ⚙️⚙️⚙️⚙️⚙️',
+    );
+
+    return this.electrifiedService.electrifiedData(dto);
+  }
 
   // description: initialize //
   @Post('electrifiedInitialize')

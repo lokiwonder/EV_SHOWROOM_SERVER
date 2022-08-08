@@ -1,3 +1,4 @@
+import { App, AppSchema } from '@common/schemas/App.schema';
 import { Asset, AssetSchema } from '@common/schemas/Asset.schema';
 import {
   ElectrifiedAll,
@@ -18,16 +19,20 @@ import { ElectrifiedService } from './electrified.service';
     // description: MongooseModule 주입
     MongooseModule.forFeature([
       {
+        name: App.name,
+        schema: AppSchema,
+      },
+      {
+        name: Asset.name,
+        schema: AssetSchema,
+      },
+      {
         name: ElectrifiedAll.name,
         schema: ElectrifiedAllSchema,
       },
       {
         name: ElectrifiedTranslation.name,
         schema: ElectrifiedTranslationSchema,
-      },
-      {
-        name: Asset.name,
-        schema: AssetSchema,
       },
     ]),
   ],

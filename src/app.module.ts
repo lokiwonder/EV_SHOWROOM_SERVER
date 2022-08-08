@@ -8,6 +8,7 @@ import { AuthModule } from './auth/auth.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { FileModule } from './file/file.module';
 import { AppController } from './app.controller';
+import { LogModule } from './log/log.module';
 
 import * as config from 'config';
 
@@ -29,6 +30,7 @@ const dbConfig = config.get('db');
     FileModule,
     // description: MongoDB 접속 모듈
     MongooseModule.forRoot(dbConfig.database),
+    LogModule,
   ],
   controllers: [AppController],
 })
