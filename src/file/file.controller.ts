@@ -6,7 +6,6 @@ import {
   ServiceUnavailableException,
   StreamableFile,
 } from '@nestjs/common';
-import { FileService } from './file.service';
 
 import * as path from 'path';
 import * as fs from 'fs';

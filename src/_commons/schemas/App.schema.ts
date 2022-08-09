@@ -20,7 +20,7 @@ export class App {
   device_info: string;
   // description: Application을 사용하는 Dealer code //
   @Prop()
-  dealer_code: string;
+  user_id: string;
 }
 
 export const AppSchema = SchemaFactory.createForClass(App);

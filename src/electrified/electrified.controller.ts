@@ -1,4 +1,11 @@
-import { Body, Controller, Logger, Post, StreamableFile } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Logger,
+  Post,
+  Res,
+  StreamableFile,
+} from '@nestjs/common';
 import {
   InitiallizeElectrifiedDTO,
   ElectrifiedCheckDTO,
@@ -27,14 +34,18 @@ export class ElectrifiedController {
 
   // description: initialize //
   @Post('electrifiedInitialize')
-  async electrifiedInitialize(@Body() dto: InitiallizeElectrifiedDTO) {
+  async electrifiedInitialize(
+    @Body() dto: InitiallizeElectrifiedDTO,
+    @Res() res,
+  ) {
     this.logger.verbose(
       '⚙️⚙️⚙️⚙️⚙️ ElectrifiedController - electrifiedInitialize  ⚙️⚙️⚙️⚙️⚙️',
     );
 
-    return new StreamableFile(
-      await this.electrifiedService.electrifiedInitialize(dto),
-    );
+    res.write(await this.electrifiedService.electrifiedInitialize(dto));
+    // return new StreamableFile(
+    //   await this.electrifiedService.electrifiedInitialize(dto),
+    // );
   }
 
   // description: electrified version check //

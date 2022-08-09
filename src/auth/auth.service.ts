@@ -1,7 +1,7 @@
 import { Injectable, Logger, UnauthorizedException } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 
-import { AuthDealerDTO } from '@auth/dto';
+import { AuthDealerDTO, IntegratedLoginDTO } from '@auth/dto';
 import { AuthRepository } from '@auth/auth.repository';
 import AuthResult from '@common/types/AuthResult.type';
 
@@ -78,10 +78,9 @@ export class AuthService {
   // ! 변경 사항 적용 후 삭제 예정 ! //
 
   // description: 통합 로그인 //
-  //   async integratedLogin(dto: IntegratedLoginDTO) {
-  //     const { id, password } = dto;
-  //     // todo : ID 패턴 확인 (딜러인지, 법인인지, 기타사용자인지) //
-
-  //     // todo : 패턴에 따라  //
-  //   }
+  async integratedLogin(dto: IntegratedLoginDTO) {
+    const { id, password } = dto;
+    // todo : ID 패턴 확인 (딜러인지, 법인인지, 기타사용자인지) //
+    // todo : 패턴에 따라  //
+  }
 }
