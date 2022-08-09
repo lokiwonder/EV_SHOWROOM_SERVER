@@ -43,9 +43,9 @@ export class ElectrifiedController {
     );
 
     res.write(await this.electrifiedService.electrifiedInitialize(dto));
-    // return new StreamableFile(
-    //   await this.electrifiedService.electrifiedInitialize(dto),
-    // );
+    return new StreamableFile(
+      await this.electrifiedService.electrifiedInitialize(dto),
+    );
   }
 
   // description: electrified version check //
