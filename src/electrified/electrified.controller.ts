@@ -42,7 +42,6 @@ export class ElectrifiedController {
       '⚙️⚙️⚙️⚙️⚙️ ElectrifiedController - electrifiedInitialize  ⚙️⚙️⚙️⚙️⚙️',
     );
 
-    res.write(await this.electrifiedService.electrifiedInitialize(dto));
     return new StreamableFile(
       await this.electrifiedService.electrifiedInitialize(dto),
     );
