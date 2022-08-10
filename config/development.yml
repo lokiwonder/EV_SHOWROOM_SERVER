@@ -1,2 +1,2 @@
 db:
-  database: 'mongodb://localhost/ev_showroom'
+  database: 'mongodb://51.116.98.90:4127/ev_cms'
