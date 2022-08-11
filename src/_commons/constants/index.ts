@@ -20,6 +20,21 @@ export const LOG_API = `${END_POINT}/log`;
 
 export const ELECTRIFIED_ACCESS_LOG_API = 'electrifiedAccessLog';
 
+// description: FILE END POINT //
+export const FILE_API = `${END_POINT}/file`;
+
+export const GET_IMAGE_API = 'getImage/:image';
+export const GET_IMAGE2_API = 'getImage2/:item/:version/:image';
+
+// description: ELECTRIFIED END POINT //
+export const ELECTRIFIED_API = `${END_POINT}/electrified`;
+
+export const ELECTRIFIED_DATA_API =
+  'electrifiedData/:app_id/:app_version/:country_code';
+export const ELECTRIFIED_INITIALIZE_API = 'electrifiedInitialize';
+export const ELECTRIFIED_CHECK_API = 'electrifiedCheck';
+export const TRANSLATION_CHECK = 'translationCheck';
+
 // description: Just Constants //
 export const ELECTRIFIED = 'ELECTRIFIED';
 export const POWERTRAIN = 'POWERTRAIN';

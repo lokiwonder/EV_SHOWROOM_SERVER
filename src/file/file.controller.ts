@@ -6,16 +6,17 @@ import {
   ServiceUnavailableException,
   StreamableFile,
 } from '@nestjs/common';
+import { FILE_API, GET_IMAGE2_API, GET_IMAGE_API } from '@common/constants';
 
 import * as path from 'path';
 import * as fs from 'fs';
 
-@Controller('apis/file')
+@Controller(FILE_API)
 export class FileController {
-  // description: admin controller logger
+  // description: admin controller logger //
   private logger = new Logger('FileController');
 
-  @Get('getImage/:image')
+  @Get(GET_IMAGE_API)
   getImage(@Param('image') image: string) {
     try {
       const file = fs.readFileSync(
@@ -23,14 +24,14 @@ export class FileController {
       );
       return new StreamableFile(file);
     } catch (e) {
-      this.logger.error(`😵😵😵😵😵 FileController - getImage 😵😵😵😵😵`);
-      this.logger.error(`😵😵😵😵😵 ERROR MESSAGE - ${e.message} 😵😵😵😵😵`);
+      this.logger.error(`😵 FileController - getImage`);
+      this.logger.error(`😵 ERROR MESSAGE - ${e.message}`);
 
       throw new ServiceUnavailableException('File Error');
     }
   }
 
-  @Get('getImage2/:item/:version/:image')
+  @Get(GET_IMAGE2_API)
   getImage2(
     @Param('item') item: string,
     @Param('version') version: number,
@@ -42,8 +43,8 @@ export class FileController {
       );
       return new StreamableFile(file);
     } catch (e) {
-      this.logger.error(`😵😵😵😵😵 FileController - getImage 😵😵😵😵😵`);
-      this.logger.error(`😵😵😵😵😵 ERROR MESSAGE - ${e.message} 😵😵😵😵😵`);
+      this.logger.error(`😵 FileController - getImage`);
+      this.logger.error(`😵 ERROR MESSAGE - ${e.message}`);
 
       throw new ServiceUnavailableException('File Error');
     }

@@ -1,9 +1,18 @@
 import {
+  ELECTRIFIED_API,
+  ELECTRIFIED_CHECK_API,
+  ELECTRIFIED_DATA_API,
+  ELECTRIFIED_INITIALIZE_API,
+  TRANSLATION_CHECK,
+} from '@common/constants';
+import { COUNTRY_CODE } from '@common/enums';
+import {
   Body,
   Controller,
+  Get,
   Logger,
+  Param,
   Post,
-  Res,
   StreamableFile,
 } from '@nestjs/common';
 import {
@@ -15,32 +24,23 @@ import {
 import { ElectrifiedService } from './electrified.service';
 
 // description: Electrified App Controller //
-@Controller('apis/electrified')
+@Controller(ELECTRIFIED_API)
 export class ElectrifiedController {
   // description: Electrified Logger //
   private logger = new Logger('ElectrifiedController');
 
   constructor(private readonly electrifiedService: ElectrifiedService) {}
 
-  // description: setting data 반환 함수 //
-  @Post('electrifiedData')
-  async electrifiedData(@Body() dto: ElectrifiedDataDTO) {
-    this.logger.verbose(
-      '⚙️⚙️⚙️⚙️⚙️ ElectrifiedController - electrifiedData  ⚙️⚙️⚙️⚙️⚙️',
-    );
-
-    return this.electrifiedService.electrifiedData(dto);
-  }
-
   // description: initialize //
-  @Post('electrifiedInitialize')
+  @Get(ELECTRIFIED_INITIALIZE_API)
   async electrifiedInitialize(
-    @Body() dto: InitiallizeElectrifiedDTO,
-    @Res() res,
+    @Param('app_id') app_id: string,
+    @Param('app_version') app_version: number,
+    @Param('country_code') country_code: COUNTRY_CODE,
   ) {
-    this.logger.verbose(
-      '⚙️⚙️⚙️⚙️⚙️ ElectrifiedController - electrifiedInitialize  ⚙️⚙️⚙️⚙️⚙️',
-    );
+    this.logger.verbose('⚙️ ElectrifiedController - electrifiedInitialize');
+
+    const dto = { app_id, app_version, country_code };
 
     return new StreamableFile(
       await this.electrifiedService.electrifiedInitialize(dto),
@@ -48,11 +48,9 @@ export class ElectrifiedController {
   }
 
   // description: electrified version check //
-  @Post('electrifiedCheck')
+  @Post(ELECTRIFIED_CHECK_API)
   async electrifiedCheck(@Body() dto: ElectrifiedCheckDTO) {
-    this.logger.verbose(
-      '⚙️⚙️⚙️⚙️⚙️ ElectrifiedController - electrifiedCheck  ⚙️⚙️⚙️⚙️⚙️',
-    );
+    this.logger.verbose('⚙️ ElectrifiedController - electrifiedCheck');
 
     return new StreamableFile(
       await this.electrifiedService.electrifiedCheck(dto),
@@ -66,11 +64,9 @@ export class ElectrifiedController {
   // }
 
   // description: electrified translation version check //
-  @Post('translationCheck')
+  @Post(TRANSLATION_CHECK)
   async translationCheck(@Body() dto: TranslationCheckDTO) {
-    this.logger.verbose(
-      '⚙️⚙️⚙️⚙️⚙️ ElectrifiedController - translationCheck  ⚙️⚙️⚙️⚙️⚙️',
-    );
+    this.logger.verbose('⚙️ ElectrifiedController - translationCheck');
 
     return new StreamableFile(
       await this.electrifiedService.translationCheck(dto),
