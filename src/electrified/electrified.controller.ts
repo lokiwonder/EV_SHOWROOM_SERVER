@@ -32,15 +32,9 @@ export class ElectrifiedController {
   constructor(private readonly electrifiedService: ElectrifiedService) {}
 
   // description: initialize //
-  @Get(ELECTRIFIED_INITIALIZE_API)
-  async electrifiedInitialize(
-    @Param('app_id') app_id: string,
-    @Param('app_version') app_version: number,
-    @Param('country_code') country_code: COUNTRY_CODE,
-  ) {
+  @Post(ELECTRIFIED_INITIALIZE_API)
+  async electrifiedInitialize(@Body() dto: InitiallizeElectrifiedDTO) {
     this.logger.verbose('⚙️ ElectrifiedController - electrifiedInitialize');
-
-    const dto = { app_id, app_version, country_code };
 
     return new StreamableFile(
       await this.electrifiedService.electrifiedInitialize(dto),
