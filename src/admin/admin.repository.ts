@@ -456,10 +456,6 @@ export class AdminRepository {
 
     try {
       const { app_type, group, item_group, sequence_number } = dto;
-      this.logger.debug(`app_type: ${app_type}`);
-      this.logger.debug(`group: ${group}`);
-      this.logger.debug(`item_group: ${item_group}`);
-      this.logger.debug(`sequence_number: ${sequence_number}`);
       if (app_type === APP_TYPE.ELECTRIFIED) {
         // group 이 차량 , item_group 이 하이라이트 이런거
         const electrified = await this.electrifiedAllModel
