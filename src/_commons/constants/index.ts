@@ -4,7 +4,7 @@ export const END_POINT = '/apis';
 // description: AUTH END POINT //
 export const AUTH_API = `${END_POINT}/auth`;
 
-export const LOGIN_API = 'login';
+export const LOGIN_API = 'loginAdmin';
 
 // description: ADMIN END POINT //
 export const ADMIN_API = `${END_POINT}/admin`;
